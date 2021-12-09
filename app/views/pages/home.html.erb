@@ -1,0 +1,13 @@
+<div class="container mt-5">
+  <div class="jumbotron text-center">
+  <h1>Tic Tac Go</h1>
+  <% if current_user %>
+    <%= link_to "Play Game", game_path %>
+    <br/>
+    <%= link_to "LogOut", destroy_user_session_path, method: :delete %>
+  <% else %>
+    <%= link_to "Create An Account", new_user_registration_path %>
+  <% end %>
+  </div>
+</div>
+ 
